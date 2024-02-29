@@ -1,13 +1,12 @@
 {
-  "name": "auto-compressor",
-  "description": "A simple CLI tool to help automatically compress png images.",
-  "module": "src/index.ts",
-  "type": "module",
-  "version": "0.0.0",
+  "name": "@4lch4/screenshot-compressor",
+  "displayName": "Screenshot Compressor",
+  "version": "0.0.1",
+  "description": "A simple CLI tool to help automatically compress my (@4lch4) screenshots.",
   "homepage": "https://github.com/4lch4/",
   "bugs": {
-    "email": "bugs@4lch4.email",
-    "url": "https://github.com/4lch4//issues"
+    "url": "https://github.com/4lch4//issues",
+    "email": "bugs@4lch4.email"
   },
   "repository": {
     "type": "git",
@@ -19,12 +18,19 @@
     "email": "hey@4lch4.email",
     "url": "https://4lch4.com"
   },
+  "type": "module",
+  "module": "src/index.ts",
   "scripts": {
+    "build": "bun build ./src/index.ts --target bun --outdir dist",
     "dev": "bun run --watch src/index.ts",
     "lint": "prettier -c .",
     "pretty": "prettier --write .",
-    "build": "bun build ./src/index.ts --target bun --outdir dist",
     "start": "bun run ./dist/index.js"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "execa": "^8.0.1",
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -34,8 +40,5 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "commander": "^12.0.0"
   }
 }
