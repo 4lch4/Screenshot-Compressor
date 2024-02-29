@@ -1,0 +1,13 @@
+version: 3
+
+tasks:
+  release:
+    aliases: [rel]
+    silent: false
+    desc: |
+      Release a new version of the auto-compressor by moving the latest versions
+      of the built files to their required locations.
+    cmds:
+      - bun run build
+      - cp -f ./dist/index.js $HOME/sw/bin/sscompress
+      - chmod +x $HOME/sw/bin/sscompress
