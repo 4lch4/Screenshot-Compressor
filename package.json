@@ -1,0 +1,41 @@
+{
+  "name": "auto-compressor",
+  "description": "A simple CLI tool to help automatically compress png images.",
+  "module": "src/index.ts",
+  "type": "module",
+  "version": "0.0.0",
+  "homepage": "https://github.com/4lch4/",
+  "bugs": {
+    "email": "bugs@4lch4.email",
+    "url": "https://github.com/4lch4//issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/4lch4/.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "4lch4",
+    "email": "hey@4lch4.email",
+    "url": "https://4lch4.com"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "lint": "prettier -c .",
+    "pretty": "prettier --write .",
+    "build": "bun build ./src/index.ts --target bun --outdir dist",
+    "start": "bun run ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3",
+    "prettier-plugin-organize-imports": "^3",
+    "prettier-plugin-packagejson": "^2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
+}
